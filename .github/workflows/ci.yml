@@ -1,0 +1,50 @@
+name: Continuous Integration
+
+on:
+  # Run when a PR is opened/updated
+  pull_request:
+    types: [edited, opened, reopened, synchronize]
+    branches: [master]
+  # Run when pushed directly to master
+  push:
+    branches: [master]
+
+jobs:
+  ci:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Node modules cache
+        uses: actions/cache@v2
+        with:
+          # Cache the npm directory for faster installation
+          path: ~/.npm
+          # Use the hash of package-lock.json as a retrieval key to invalidate the cache in case new
+          # packages are added
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+          # Fall back to a key that matches the previous key without the hash part
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      - name: NPM installation
+        run: |
+          npm ci
+
+      - name: Linting
+        run: |
+          npm run lint
+
+      - name: Building
+        run: |
+          npm run build
+
+      - name: Unit tests
+        run: |
+          npm test
+
+      - name: Acceptance tests
+        run: |
+          npm run test:acceptance
