@@ -17,6 +17,7 @@
       "error",
       { "multiline": { "delimiter": "semi", "requireLast": true } }
     ],
+    "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/semi": ["error", "always"],
     "array-callback-return": ["error", { "checkForEach": true }],
@@ -37,7 +38,6 @@
     "no-control-regex": ["off"],
     "no-lonely-if": ["error"],
     "no-param-reassign": ["error", { "props": true }],
-    "no-shadow": ["error"],
     "no-trailing-spaces": ["error"],
     "object-shorthand": ["error", "always"],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
