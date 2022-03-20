@@ -24,6 +24,7 @@ Replace these values:
 - `private: true` (add if needed)
 - `repository.url`
 - `keywords` (optional, for NPM packages)
+- `author`
 - `license`
 - `bugs.url`
 - `homepage`
