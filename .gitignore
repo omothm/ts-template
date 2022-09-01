@@ -1,4 +1,15 @@
-.DS_Store
+# ide
 .vscode
-dist
+
+# node
 node_modules
+
+# os
+.DS_Store
+
+# output
+dist
+
+# tap (istanbul)
+.nyc_output/
+coverage/

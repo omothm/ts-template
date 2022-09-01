@@ -1,6 +1,5 @@
 export default class Api {
-
-  exampleApi(): never {
-    throw new Error('Not implemented');
+  exampleApi(): void {
+    // This should call relevant functions from src
   }
 }

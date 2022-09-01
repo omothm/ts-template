@@ -1,19 +1,13 @@
-import { TestCase, TestSuite } from 'ts-nanotest';
+import tap from 'tap';
 import Api from './api';
 
-export default class ExampleAcceptance extends TestSuite {
+let api: Api;
 
-  private api: Api;
+void tap.beforeEach(() => {
+  api = new Api();
+});
 
-  beforeEach(): void {
-    this.api = new Api();
-  }
-
-  tests(): TestCase[] {
-    return [
-      this.skip('skipped test', () => {
-        this.api.exampleApi();
-      }),
-    ];
-  }
-}
+void tap.test('example test', (t) => {
+  api.exampleApi();
+  t.end();
+});

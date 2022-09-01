@@ -1,10 +1,11 @@
-# Typescript project template
+# TypeScript project template
 
-This template is a starting point for Typescript projects. It features the following tools:
+This template is a starting point for TypeScript projects. It features the following tools:
 
 - [ESLint](https://eslint.org/)
 - [GitHub Actions](https://github.com/features/actions)
-- [TS-Nanotest](https://github.com/omothm/ts-nanotest)
+- [Node Tap](https://node-tap.org)
+- [Prettier](https://prettier.io)
 
 ## Replace placeholders
 
