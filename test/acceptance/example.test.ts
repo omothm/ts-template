@@ -1,13 +1,13 @@
-import tap from 'tap';
+import test from 'ava';
 import Api from './api';
 
 let api: Api;
 
-void tap.beforeEach(() => {
+test.beforeEach(() => {
   api = new Api();
 });
 
-void tap.test('example test', (t) => {
+test('example test', (t) => {
   api.exampleApi();
-  t.end();
+  t.pass();
 });

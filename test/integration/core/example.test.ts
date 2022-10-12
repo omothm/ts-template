@@ -1,3 +1,3 @@
-import tap from 'tap';
+import test from 'ava';
 
-void tap.test('example integration test');
+test.todo('example integration test');

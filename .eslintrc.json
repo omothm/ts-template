@@ -40,11 +40,9 @@
     "no-trailing-spaces": ["error"],
     "object-shorthand": ["error", "always"],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
-    "quote-props": ["error", "consistent-as-needed"],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "semi": ["off"],
     "sort-imports": ["error", { "ignoreDeclarationSort": true }],
-    "spaced-comment": ["error", "always"],
     "yoda": ["error"]
   }
 }

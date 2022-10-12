@@ -1,6 +1,9 @@
 # ide
 .vscode
 
+# linting
+.eslintcache
+
 # node
 node_modules
 
@@ -10,6 +13,5 @@ node_modules
 # output
 dist
 
-# tap (istanbul)
-.nyc_output/
+# testing
 coverage/
