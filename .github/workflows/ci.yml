@@ -15,19 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Node modules cache
-        uses: actions/cache@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          # Cache the npm directory for faster installation
-          path: ~/.npm
-          # Use the hash of package-lock.json as a retrieval key to invalidate the cache in case new
-          # packages are added
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
-          # Fall back to a key that matches the previous key without the hash part
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
+          node-version: 16
+          cache: 'npm'
+
+      - name: ESLint cache
+        uses: actions/cache@v3
+        with:
+          path: .eslintcache
+          key: ${{ runner.os }}-eslintcache
 
       - name: NPM installation
         run: |
