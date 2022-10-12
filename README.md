@@ -4,7 +4,7 @@ This template is a starting point for TypeScript projects. It features the follo
 
 - [ESLint](https://eslint.org/)
 - [GitHub Actions](https://github.com/features/actions)
-- [Node Tap](https://node-tap.org)
+- [AVA](https://github.com/avajs/ava)
 - [Prettier](https://prettier.io)
 
 ## Replace placeholders
