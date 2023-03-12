@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "nodemon",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/nodemon",
+      "program": "${workspaceFolder}/src",
+      "args": [
+        "--ext",
+        "ts",
+        "--ignore",
+        "*.d.ts",
+        "--ignore",
+        "*.test.ts",
+        "--delay",
+        "1300ms",
+        "--exec",
+        "ts-node --require tsconfig-paths/register --transpileOnly"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

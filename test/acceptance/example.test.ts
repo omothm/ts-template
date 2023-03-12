@@ -1,5 +1,5 @@
 import test from 'ava';
-import Api from './api';
+import { Api } from './api';
 
 let api: Api;
 

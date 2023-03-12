@@ -1,3 +1,7 @@
-export default function exampleFunction(): number {
-  return 42;
+export class Example {
+  private readonly secret = 42;
+
+  answer() {
+    return this.secret;
+  }
 }

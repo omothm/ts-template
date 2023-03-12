@@ -1,10 +1,18 @@
 import test from 'ava';
-import exampleFunction from './example';
+import { Example } from './example';
 
-test('example test', (t) => {
-  const answer = 42;
+test('answer: should return the secret', (t) => {
+  const example = new ExampleProxy();
 
-  const result = exampleFunction();
+  const answer = example.answer();
 
-  t.is(result, answer);
+  t.is(answer, 42);
 });
+
+class ExampleProxy {
+  private readonly example = new Example();
+
+  answer() {
+    return this.example.answer();
+  }
+}

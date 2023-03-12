@@ -1,5 +1,6 @@
 # ide
-.vscode
+.vscode/*
+.vscode/*-example.json
 
 # linting
 .eslintcache
@@ -14,4 +15,4 @@ node_modules
 dist
 
 # testing
-coverage/
+coverage
