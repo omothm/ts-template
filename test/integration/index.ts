@@ -1,4 +1,5 @@
 import { spawn } from 'node:child_process';
+import { globSync } from 'glob';
 
 function mapToSource(file: string) {
   return file
@@ -6,7 +7,7 @@ function mapToSource(file: string) {
     .replace(/\.test\.ts$/, '.ts');
 }
 
-const testFiles = process.argv.slice(2);
+const testFiles = globSync('test/integration/**/*.test.ts');
 const includeFiles = testFiles.map((f) => `--include=${mapToSource(f)}`);
 
 spawn('npx', ['c8', '--100', ...includeFiles, 'ava', ...testFiles], {
