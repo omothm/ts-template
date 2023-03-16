@@ -28,10 +28,6 @@
       { "argsIgnorePattern": "^_" }
     ],
     "@typescript-eslint/prefer-readonly": "warn",
-    "@typescript-eslint/prefer-readonly-parameter-types": [
-      "warn",
-      { "ignoreInferredTypes": true, "treatMethodsAsReadonly": true }
-    ],
     "array-callback-return": ["error", { "checkForEach": true }],
     "arrow-parens": "error",
     "consistent-return": "error",
