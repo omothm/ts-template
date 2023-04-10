@@ -6,8 +6,10 @@
   "scripts": {
     "prebuild": "rimraf dist/dev",
     "build": "tsc --project tsconfig.dev.json",
+    "postbuild": "resolve-tspaths --project tsconfig.dev.json",
     "prebuild:prod": "rimraf dist/prod",
     "build:prod": "tsc --project tsconfig.prod.json",
+    "postbuild:prod": "resolve-tspaths --project tsconfig.prod.json",
     "lint": "eslint --cache .",
     "start": "nodemon --ext ts --ignore *.d.ts --ignore *.test.ts --delay 1300ms --exec 'ts-node --require tsconfig-paths/register --transpileOnly' src",
     "test": "c8 --100 ava 'src/**/*.test.ts'",
@@ -55,6 +57,7 @@
     "glob": "^9.3.0",
     "nodemon": "^2.0.21",
     "prettier": "^2.8.4",
+    "resolve-tspaths": "^0.8.8",
     "rimraf": "^4.4.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.2",
