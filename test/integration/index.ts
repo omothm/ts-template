@@ -4,7 +4,8 @@ import { globSync } from 'glob';
 function mapToSource(file: string) {
   return file
     .replace(/^test\/integration/, 'src')
-    .replace(/\.test\.ts$/, '.ts');
+    .replace(/\.test\.ts$/, '.ts')
+    .replace(/\.all\.ts$/, '/**/*.ts');
 }
 
 const testFiles = globSync('test/integration/**/*.test.ts');
