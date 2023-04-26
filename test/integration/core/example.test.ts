@@ -1,3 +1,3 @@
-import test from 'ava';
+import test from "ava";
 
-test.todo('example integration test');
+test.todo("example integration test");

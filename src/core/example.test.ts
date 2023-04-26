@@ -1,7 +1,7 @@
-import test from 'ava';
-import { Example } from './example';
+import test from "ava";
+import { Example } from "./example";
 
-test('answer: should return the secret', (t) => {
+test("answer: should return the secret", (t) => {
   const example = new ExampleProxy();
 
   const answer = example.answer();

@@ -40,10 +40,7 @@
       "tsconfig-paths/register"
     ]
   },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
+  "prettier": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",

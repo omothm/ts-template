@@ -1,4 +1,4 @@
-import { Example } from './core';
+import { Example } from "./core";
 
 main();
 
