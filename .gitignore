@@ -1,6 +1,6 @@
 # ide
-.vscode/*
-.vscode/*-example.json
+.vscode/launch.json
+.vscode/settings.json
 
 # linting
 .eslintcache
